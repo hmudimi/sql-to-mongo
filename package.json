@@ -1,5 +1,5 @@
 {
-  "name": "@synatic/sql-to-mongo",
+  "name": "@hmudimi/s2m",
   "version": "1.1.18",
   "description": "Convert SQL to mongo queries or aggregates",
   "main": "index.js",
@@ -20,32 +20,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/synatic/sql-to-mongo.git"
+    "url": "git+https://github.com/hmudimi/sql-to-mongo.git"
   },
   "keywords": [
     "mongodb",
     "sql",
     "sql to mongo"
   ],
-  "author": {
-    "name": "Synatic Inc",
-    "url": "https://www.synatic.com"
-  },
-  "contributors": [
-    {
-      "name": "Martin Naude",
-      "url": "https://www.synatic.com"
-    },
-    {
-      "name": "Thiren Bunsee",
-      "url": "https://www.synatic.com"
-    }
-  ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/synatic/sql-to-mongo/issues"
-  },
-  "homepage": "https://github.com/synatic/sql-to-mongo#readme",
+  "homepage": "https://github.com/hmudimi/sql-to-mongo#readme",
   "engines": {
     "node": ">=12",
     "npm": ">=5.0.0"
@@ -87,5 +70,9 @@
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.2"
   },
-  "sideEffects": false
+  "sideEffects": false,
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  }
 }

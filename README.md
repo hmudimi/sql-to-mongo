@@ -1,3 +1,5 @@
+### Forked from @synatic/sql-to-mongo, Please use @hmudimi/s2m to get latest updates.
+
 # sql-to-mongo
 
 Converts M-SQL Queries to Mongo find statements or aggregation pipelines.
@@ -22,13 +24,13 @@ M-SQL is a specific way to use MySQL style queries tailored to MongoDB functions
 ## Installation
 
 ```bash
-npm i @synatic/sql-to-mongo --save
+npm i @hmudimi/s2m --save
 ```
 
 ## Usage
 
 ```js
-const SQLMongoParser = require('@synatic/sql-to-mongo');
+const SQLMongoParser = require('@hmudimi/s2m');
 ```
 
 ### parseSQL(sqlStatement)
@@ -36,7 +38,7 @@ const SQLMongoParser = require('@synatic/sql-to-mongo');
 Parses the given SQL statement to an aggregate or query depending on if a straight query is possible.
 
 ```js
-const SQLMongoParser=require('@synatic/sql-to-mongo');
+const SQLMongoParser=require('@hmudimi/s2m');
 console.log(JSON.stringify(SQLMongoParser.parseSQL("select id from `films` where `id` > 10 limit 10"),null,4));
 
 {
@@ -55,7 +57,7 @@ console.log(JSON.stringify(SQLMongoParser.parseSQL("select id from `films` where
 ```
 
 ```js
-const SQLMongoParser=require('@synatic/sql-to-mongo');
+const SQLMongoParser=require('@hmudimi/s2m');
 console.log(JSON.stringify(SQLMongoParser.makeMongoAggregate("select id from `films` where `id` > 10 group by id"),null,4));
 {
     "pipeline": [
@@ -124,7 +126,7 @@ const {MongoClient} = require('mongodb');
 Generates a mongo query if possible. Will throw an exception if not possible.
 
 ```js
-const SQLMongoParser=require('@synatic/sql-to-mongo');
+const SQLMongoParser=require('@hmudimi/s2m');
 console.log(SQLMongoParser.makeMongoQuery("select id from `films` where id > 10 limit 10"));
 
 {
@@ -146,7 +148,7 @@ console.log(SQLMongoParser.makeMongoQuery("select id from `films` where id > 10 
 Generates a mongo aggregate.
 
 ```js
-const SQLMongoParser=require('@synatic/sql-to-mongo');
+const SQLMongoParser=require('@hmudimi/s2m');
 console.log(JSON.stringify(SQLMongoParser.makeMongoAggregate("select id from `films` group by id"), null, 4));
 
 {
@@ -176,7 +178,7 @@ console.log(JSON.stringify(SQLMongoParser.makeMongoAggregate("select id from `fi
 Returns whether a statement can be queried or an aggregate must be used.
 
 ```js
-const SQLMongoParser = require('@synatic/sql-to-mongo');
+const SQLMongoParser = require('@hmudimi/s2m');
 
 console.log(SQLMongoParser.canQuery('select id from `films`'));
 //true
@@ -190,7 +192,7 @@ console.log(SQLMongoParser.canQuery('select id from `films` group by id'));
 Parses a SQL statement to an AST (abstract syntax tree)
 
 ```js
-const SQLMongoParser=require('@synatic/sql-to-mongo');
+const SQLMongoParser=require('@hmudimi/s2m');
 
 const ast=SQLMongoParser.parseSQLtoAST("select id from `films`");
 console.log(JSON.stringify(ast, null, 4));
