@@ -1,4 +1,4 @@
-### Forked from @synatic/sql-to-mongo, Please use @hmudimi/s2m to get latest updates.
+### Forked from @synatic/sql-to-mongo, Please use @synatic/sql-to-mongo to get latest updates.
 
 # sql-to-mongo
 
